@@ -38,3 +38,95 @@
 2019/02/18 10:10:41.254 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/user.go:180sSELECT * FROM "users"  WHERE "users"."deleted_at" IS NULL AND ((email = ? and pwd = ?)) LIMIT 1[123@qq.com 123456] 1
 2019/02/18 10:10:41.575 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41971.3µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 1
 2019/02/18 10:10:41.575 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 10:38:22.891 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 10:39:05.787 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:410sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 1
+2019/03/05 10:39:05.788 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:25:48.135 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/user.go:186.9979msSELECT * FROM "users"  WHERE "users"."deleted_at" IS NULL AND ((email = ? and pwd = ?)) LIMIT 1[532889507@qq.com 123456@x] 1
+2019/03/05 14:25:48.461 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:410sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 1
+2019/03/05 14:25:48.462 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:45999.3µsSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:26:13.445 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:251.0024msSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? and user_id = ?)) LIMIT 1[47ed755c-dab4-4819-88f4-8b1666ff42c6 2] 0
+2019/03/05 14:26:13.449 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:491.9981msINSERT INTO "notes" ("created_at","updated_at","deleted_at","key","user_id","title","summary","content","source","editor","files") VALUES (?,?,?,?,?,?,?,?,?,?,?)[2019-03-05 14:26:13.4468337 +0800 CST m=+13670.875102101 2019-03-05 14:26:13.4468337 +0800 CST m=+13670.875102101 <nil> 47ed755c-dab4-4819-88f4-8b1666ff42c6 2 ads asd... <p>asd</p>  default ] 1
+2019/03/05 14:26:13.449 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:490sSELECT "visit", "praise" FROM "notes"  WHERE (id = ?)[2] 1
+2019/03/05 14:26:13.772 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:29978.9µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? )) LIMIT 1[47ed755c-dab4-4819-88f4-8b1666ff42c6] 1
+2019/03/05 14:26:13.772 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/message.go:200sSELECT * FROM "messages"  WHERE "messages"."deleted_at" IS NULL AND ((note_key = ? )) ORDER BY updated_at desc LIMIT 1[47ed755c-dab4-4819-88f4-8b1666ff42c6] 0
+2019/03/05 14:26:13.780 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:33985.8µsUPDATE "notes" SET "visit" = visit+1  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ?))[47ed755c-dab4-4819-88f4-8b1666ff42c6] 1
+2019/03/05 14:26:16.796 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:411.0007msSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 2
+2019/03/05 14:26:16.796 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:26:28.832 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:250sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? and user_id = ?)) LIMIT 1[eec086b3-0612-48f2-9647-43fbb9379e8a 2] 0
+2019/03/05 14:26:28.833 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:491.0029msINSERT INTO "notes" ("created_at","updated_at","deleted_at","key","user_id","title","summary","content","source","editor","files") VALUES (?,?,?,?,?,?,?,?,?,?,?)[2019-03-05 14:26:28.8323769 +0800 CST m=+13686.260645301 2019-03-05 14:26:28.8323769 +0800 CST m=+13686.260645301 <nil> eec086b3-0612-48f2-9647-43fbb9379e8a 2 asd sasd... <p>sasd</p>  default ] 1
+2019/03/05 14:26:28.833 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:490sSELECT "visit", "praise" FROM "notes"  WHERE (id = ?)[3] 1
+2019/03/05 14:26:29.156 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:290sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? )) LIMIT 1[eec086b3-0612-48f2-9647-43fbb9379e8a] 1
+2019/03/05 14:26:29.157 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/message.go:201.0011msSELECT * FROM "messages"  WHERE "messages"."deleted_at" IS NULL AND ((note_key = ? )) ORDER BY updated_at desc LIMIT 1[eec086b3-0612-48f2-9647-43fbb9379e8a] 0
+2019/03/05 14:26:29.160 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:333.0497msUPDATE "notes" SET "visit" = visit+1  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ?))[eec086b3-0612-48f2-9647-43fbb9379e8a] 1
+2019/03/05 14:26:36.622 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:250sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? and user_id = ?)) LIMIT 1[ac18b3e5-9687-4baa-b1c3-24fdac9e7660 2] 0
+2019/03/05 14:26:36.624 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:49977.9µsINSERT INTO "notes" ("created_at","updated_at","deleted_at","key","user_id","title","summary","content","source","editor","files") VALUES (?,?,?,?,?,?,?,?,?,?,?)[2019-03-05 14:26:36.6231273 +0800 CST m=+13694.051395701 2019-03-05 14:26:36.6231273 +0800 CST m=+13694.051395701 <nil> ac18b3e5-9687-4baa-b1c3-24fdac9e7660 2 fasfa safaf... <p>safaf</p>  default ] 1
+2019/03/05 14:26:36.624 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:490sSELECT "visit", "praise" FROM "notes"  WHERE (id = ?)[4] 1
+2019/03/05 14:26:36.950 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:290sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? )) LIMIT 1[ac18b3e5-9687-4baa-b1c3-24fdac9e7660] 1
+2019/03/05 14:26:36.951 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/message.go:201msSELECT * FROM "messages"  WHERE "messages"."deleted_at" IS NULL AND ((note_key = ? )) ORDER BY updated_at desc LIMIT 1[ac18b3e5-9687-4baa-b1c3-24fdac9e7660] 0
+2019/03/05 14:26:36.953 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:331.9996msUPDATE "notes" SET "visit" = visit+1  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ?))[ac18b3e5-9687-4baa-b1c3-24fdac9e7660] 1
+2019/03/05 14:26:42.592 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:25998µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? and user_id = ?)) LIMIT 1[fa4ee7c2-94ab-41be-aded-17436b52c842 2] 0
+2019/03/05 14:26:42.593 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:491.0012msINSERT INTO "notes" ("created_at","updated_at","deleted_at","key","user_id","title","summary","content","source","editor","files") VALUES (?,?,?,?,?,?,?,?,?,?,?)[2019-03-05 14:26:42.592014 +0800 CST m=+13700.020282401 2019-03-05 14:26:42.592014 +0800 CST m=+13700.020282401 <nil> fa4ee7c2-94ab-41be-aded-17436b52c842 2 fasf af... <p>af</p>  default ] 1
+2019/03/05 14:26:42.593 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:490sSELECT "visit", "praise" FROM "notes"  WHERE (id = ?)[5] 1
+2019/03/05 14:26:42.913 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:290sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? )) LIMIT 1[fa4ee7c2-94ab-41be-aded-17436b52c842] 1
+2019/03/05 14:26:42.914 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/message.go:201.0008msSELECT * FROM "messages"  WHERE "messages"."deleted_at" IS NULL AND ((note_key = ? )) ORDER BY updated_at desc LIMIT 1[fa4ee7c2-94ab-41be-aded-17436b52c842] 0
+2019/03/05 14:26:42.914 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:331.0008msUPDATE "notes" SET "visit" = visit+1  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ?))[fa4ee7c2-94ab-41be-aded-17436b52c842] 1
+2019/03/05 14:26:48.333 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:250sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? and user_id = ?)) LIMIT 1[f53dcb5c-d2a3-4ea9-b58d-3cde583be43d 2] 0
+2019/03/05 14:26:48.335 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:49968.9µsINSERT INTO "notes" ("created_at","updated_at","deleted_at","key","user_id","title","summary","content","source","editor","files") VALUES (?,?,?,?,?,?,?,?,?,?,?)[2019-03-05 14:26:48.3331266 +0800 CST m=+13705.761395001 2019-03-05 14:26:48.3331266 +0800 CST m=+13705.761395001 <nil> f53dcb5c-d2a3-4ea9-b58d-3cde583be43d 2 fsaf asf... <p>asf</p>  default ] 1
+2019/03/05 14:26:48.335 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:490sSELECT "visit", "praise" FROM "notes"  WHERE (id = ?)[6] 1
+2019/03/05 14:26:48.660 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:290sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ? )) LIMIT 1[f53dcb5c-d2a3-4ea9-b58d-3cde583be43d] 1
+2019/03/05 14:26:48.660 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/message.go:200sSELECT * FROM "messages"  WHERE "messages"."deleted_at" IS NULL AND ((note_key = ? )) ORDER BY updated_at desc LIMIT 1[f53dcb5c-d2a3-4ea9-b58d-3cde583be43d] 0
+2019/03/05 14:26:48.661 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:33998.7µsUPDATE "notes" SET "visit" = visit+1  WHERE "notes"."deleted_at" IS NULL AND ((`key` = ?))[f53dcb5c-d2a3-4ea9-b58d-3cde583be43d] 1
+2019/03/05 14:26:50.057 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41997µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 14:26:50.057 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:28:08.974 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41969.8µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 14:28:08.974 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:30:54.076 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41969.6µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 14:30:54.077 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:46:48.282 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:413.0127msSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 14:46:48.282 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 14:48:24.936 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:28.558 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:32.157 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:37.358 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:41.368 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:44.315 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:46.758 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:49.170 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:51.414 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:53.492 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:55.822 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:48:58.229 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:00.859 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:03.492 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:05.811 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:07.817 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:10.516 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:12.611 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:14.757 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:49:16.998 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 14:55:40.637 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:34:48.765 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:35:00.695 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41990.4µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:35:00.695 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:36:26.588 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:37:54.989 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:38:16.014 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:38:18.855 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:38:22.812 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:410sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:38:22.813 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:451.0105msSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:39:36.125 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:39:38.722 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:39:44.369 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41999.6µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:39:44.369 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:40:17.633 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/05 15:40:27.749 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:410sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:40:27.749 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:40:36.317 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:41999.5µsSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:40:36.317 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:40:57.581 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/user.go:191.0007msSELECT * FROM "users"  WHERE "users"."deleted_at" IS NULL AND ((email = ? and pwd = ?)) LIMIT 1[532889507@qq.com 123456@x] 1
+2019/03/05 15:40:57.903 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:410sSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:40:57.903 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:41:02.728 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:413.0132msSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:41:02.729 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0
+2019/03/05 15:41:15.013 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:413.0003msSELECT * FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?)) ORDER BY updated_at DESC LIMIT 10 OFFSET 0[%%] 6
+2019/03/05 15:41:15.013 [main.go:787]  [ORM] sqlE:/go_site/src/github.com/blog/liteblog/models/note.go:450sSELECT count(*) FROM "notes"  WHERE "notes"."deleted_at" IS NULL AND ((title like ?))[%%] 0

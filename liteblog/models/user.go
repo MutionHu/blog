@@ -1,17 +1,18 @@
 package models
 
-import (
-	"github.com/jinzhu/gorm"
-)
+import "time"
 
 type User struct {
-	gorm.Model
-	Name   string `gorm:"unique_index"`
-	Email  string `gorm:"unique_index"`
-	Avatar string `json:"avatar"`
-	Pwd    string `json:"-"`
-	Role   int    `gorm:"default:0" json:"role"` // 0 管理员 1正常用户
-	Editor string `json:"editor"`
+	ID        uint `gorm:"primary_key;column:id" json:"id"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	DeletedAt *time.Time `sql:"index"`
+	Name      string     `gorm:"unique_index"`
+	Email     string     `gorm:"unique_index"`
+	Avatar    string     `json:"avatar"`
+	Pwd       string     `json:"-"`
+	Role      int        `gorm:"default:0" json:"role"` // 0 管理员 1正常用户
+	Editor    string     `json:"editor"`
 }
 
 func (db *DB) QueryUserByEmailAndPassword(email, password string) (user User, err error) {
