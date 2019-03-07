@@ -1,21 +1,23 @@
 FROM golang:latest as builder
 MAINTAINER <532889507@qq.com>
-WORKDIR $GOPATH/src/github.com/blog/liteblog
-COPY . $GOPATH/src/github.com/blog/liteblog
-RUN go get github.com/tools/godep
+WORKDIR /go/src/github.com/blog/liteblog
+#COPY . $GOPATH/src/github.com/blog/liteblog
+RUN go get -u -v github.com/tools/godep
+COPY . .
 #ENV CGO_ENABLED=0
 #RUN godep go build -installsuffix cgo -ldflags="-w -s"
 RUN godep go build  -ldflags="-w -s"
 
 #FROM scratch as final
 FROM alpine as final
-#FROM debian:latest as final
 MAINTAINER <532889507@qq.com>
+WORKDIR /app
+#FROM debian:latest as final
 #COPY --from=builder /etc/passwd /etc/passwd
-COPY --from=builder $GOPATH/src/github.com/blog/liteblog/liteblog /app/liteblog
-COPY --from=builder $GOPATH/src/github.com/blog/liteblog/views /app/views
-COPY --from=builder $GOPATH/src/github.com/blog/liteblog/static /app/static
-COPY --from=builder $GOPATH/src/github.com/blog/liteblog/conf /app/conf
+COPY --from=builder go/src/github.com/blog/liteblog/liteblog /app/liteblog
+COPY --from=builder go/src/github.com/blog/liteblog/views /app/views
+COPY --from=builder go/src/github.com/blog/liteblog/static /app/static
+COPY --from=builder go/src/github.com/blog/liteblog/conf /app/conf
 
 VOLUME /app/data
 VOLUME /app/assert
